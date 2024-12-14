@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astrology Consultation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Welcome to Astrology Consultation</h1>
+      <p>Choose an astrologer to start chatting</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="buttons-container">
+      <button class="astro-btn" onclick="loadAstrologerWidget('astrologer1')">Astrologer 1</button>
+      <button class="astro-btn" onclick="loadAstrologerWidget('astrologer2')">Astrologer 2</button>
+      <button class="astro-btn" onclick="loadAstrologerWidget('astrologer3')">Astrologer 3</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Astrology Consultation</p>
+  </footer>
+
+  <!-- Tawk.to Integration Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+
+    function loadAstrologerWidget(astroId) {
+      var scriptTag = document.createElement("script");
+      var widgetSrc = "";
+
+      // Load widget based on selected astrologer
+      if (astroId === "astrologer1") {
+        widgetSrc = 'https://embed.tawk.to/YOUR_ASTROLOGER1_PROPERTY_ID_HERE/default';
+      } else if (astroId === "astrologer2") {
+        widgetSrc = 'https://embed.tawk.to/YOUR_ASTROLOGER2_PROPERTY_ID_HERE/default';
+      } else if (astroId === "astrologer3") {
+        widgetSrc = 'https://embed.tawk.to/YOUR_ASTROLOGER3_PROPERTY_ID_HERE/default';
+      }
+
+      // Remove any previous widget script if exists
+      if (document.getElementById("tawk-script")) {
+        document.getElementById("tawk-script").remove();
+      }
+
+      // Create a new script tag to load the widget
+      scriptTag.id = "tawk-script";
+      scriptTag.async = true;
+      scriptTag.src = widgetSrc;
+      scriptTag.charset = 'UTF-8';
+      scriptTag.setAttribute('crossorigin', '*');
+      document.body.appendChild(scriptTag);
+    }
+  </script>
+  <!-- End of Tawk.to Integration Script -->
+
+</body>
+</html>
