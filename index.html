@@ -8,17 +8,22 @@
 
     <!--Start of Tawk.to Script-->
   <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/675d7e9daf5bfec1dbdbb46b/1if2k4v9a';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
+  <script>
+  window.intercomSettings = {
+    api_base: "https://api-iam.intercom.io",
+    app_id: "idfv0na4",
+    user_id: user.id, // IMPORTANT: Replace "user.id" with the variable you use to capture the user's ID
+    name: user.name, // IMPORTANT: Replace "user.name" with the variable you use to capture the user's name
+    email: user.email, // IMPORTANT: Replace "user.email" with the variable you use to capture the user's email address
+    created_at: user.createdAt, // IMPORTANT: Replace "user.createdAt" with the variable you use to capture the user's sign-up date
+  };
+</script>
+
+
+<script>
+  // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/idfv0na4'
+  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/idfv0na4';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
 <!--End of Tawk.to Script-->
   <!--End of Tawk.to Script-->
 </head>
@@ -42,38 +47,7 @@
     <p>&copy; 2024 Astrology Consultation</p>
   </footer>
 
-  <!-- Tawk.to Integration Script -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-
-    function loadAstrologerWidget(astroId) {
-      var scriptTag = document.createElement("script");
-      var widgetSrc = "";
-
-      // Load widget based on selected astrologer
-      if (astroId === "astrologer1") {
-        widgetSrc = 'https://tawk.to/chat/675d7e9daf5bfec1dbdbb46b/1if2k4v9a';
-      } else if (astroId === "astrologer2") {
-        widgetSrc = 'https://embed.tawk.to/YOUR_ASTROLOGER2_PROPERTY_ID_HERE/default';
-      } else if (astroId === "astrologer3") {
-        widgetSrc = 'https://embed.tawk.to/YOUR_ASTROLOGER3_PROPERTY_ID_HERE/default';
-      }
-
-      // Remove any previous widget script if exists
-      if (document.getElementById("tawk-script")) {
-        document.getElementById("tawk-script").remove();
-      }
-
-      // Create a new script tag to load the widget
-      scriptTag.id = "tawk-script";
-      scriptTag.async = true;
-      scriptTag.src = widgetSrc;
-      scriptTag.charset = 'UTF-8';
-      scriptTag.setAttribute('crossorigin', '*');
-      document.body.appendChild(scriptTag);
-    }
-  </script>
-  <!-- End of Tawk.to Integration Script -->
+  
 
 </body>
 </html>
