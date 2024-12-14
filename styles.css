@@ -1,0 +1,57 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  background-color: #4CAF50;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.header-container h1 {
+  font-size: 2.5rem;
+}
+
+.header-container p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.astro-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.astro-btn:hover {
+  background-color: #45a049;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #888;
+}
